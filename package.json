@@ -1,0 +1,29 @@
+{
+  "name": "horror-shorts",
+  "version": "1.0.0",
+  "description": "Reusable Remotion pipeline for short-form vertical horror videos (TikTok). New story = data swap, not a re-code.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sfx": "node scripts/generate-sfx.mjs",
+    "narrate": "node scripts/generate-narration.mjs",
+    "dev": "remotion studio",
+    "studio": "remotion studio",
+    "render": "remotion render FindMy out/find-my.mp4",
+    "render:story": "remotion render",
+    "still": "remotion still FindMy out/find-my-cover.png --frame=45",
+    "upgrade": "remotion upgrade",
+    "prerender": "npm run sfx"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.4.0"
+  }
+}
